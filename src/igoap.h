@@ -6,6 +6,7 @@
 #include <memory>
 
 #include "goapaction.h"
+#include "gameobject.h"
 
 /**
  * Collect the world data for this Agent that will be
@@ -76,4 +77,9 @@ public:
      * False if it is not there yet.
      */
     virtual bool move_agent(const std::shared_ptr<GoapAction>& nextAction) = 0;
+
+    /*
+     * Game Object
+     */
+    std::shared_ptr<GameObject> game_object = nullptr;
 };
