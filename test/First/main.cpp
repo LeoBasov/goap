@@ -28,7 +28,9 @@ int main()
 
     agent->set_up(data_provider, available_actions, idle_state, move_to_state, perform_action_state);
 
-    agent->update();
+    agent->update(); //idle
+    agent->update(); //action
+    agent->update(); //move
 
     return 0;
 }
