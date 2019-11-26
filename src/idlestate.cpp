@@ -15,7 +15,7 @@ void IdleState::update(const std::shared_ptr<FiniteStateMachine>& fsm, const std
     auto goal_state = agent->data_provider->create_goal_state();
     std::stack<std::shared_ptr<GoapAction>> plan = this->planner.plan(agent, goal_state);
 
-    if(!plan.size()){
+    if(plan.size()){
         agent->current_actions = plan;
         agent->data_provider->plan_found(goal_state, plan);
 
