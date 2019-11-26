@@ -13,7 +13,7 @@ public:
     virtual ~GoapAction();
 
     virtual bool is_done() const = 0;
-    virtual bool checkProceduralPrecondition(const std::shared_ptr<GameObject>& agent) = 0;
+    virtual bool check_procedural_precondition(const std::shared_ptr<GameObject>& agent) = 0;
     virtual bool perform(const std::shared_ptr<GameObject>& agent) = 0;
     virtual bool requires_in_range() = 0;
 

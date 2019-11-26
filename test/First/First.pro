@@ -15,6 +15,7 @@ SOURCES += \
         ../../src/movetostate.cpp \
         ../../src/performactionstate.cpp \
         main.cpp \
+        src/chopwood.cpp \
         src/labourer.cpp
 
 HEADERS += \
@@ -28,4 +29,5 @@ HEADERS += \
     ../../src/igoap.h \
     ../../src/movetostate.h \
     ../../src/performactionstate.h \
+    src/chopwood.h \
     src/labourer.h
