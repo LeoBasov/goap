@@ -2,7 +2,7 @@
 
 ChopWood::ChopWood()
 {
-
+    add_effect("has_wood", true);
 }
 
 ChopWood::~ChopWood()
