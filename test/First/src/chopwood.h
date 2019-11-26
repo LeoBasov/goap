@@ -14,4 +14,7 @@ public:
     bool requires_in_range() override;
 
     void reset() override;
+
+private:
+    bool done = false;
 };

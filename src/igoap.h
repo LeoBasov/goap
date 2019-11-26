@@ -76,4 +76,6 @@ public:
      * False if it is not there yet.
      */
     virtual bool move_agent(const std::shared_ptr<GoapAction>& nextAction) = 0;
+
+    virtual void modify_state(const std::string& key, const bool& value) = 0;
 };

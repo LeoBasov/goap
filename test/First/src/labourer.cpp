@@ -2,7 +2,8 @@
 
 Labourer::Labourer()
 {
-
+    this->world_state["has_wood"] = false;
+    this->goal_state["has_wood"] = true;
 }
 
 Labourer::~Labourer()
@@ -13,22 +14,20 @@ Labourer::~Labourer()
 
 std::map<std::string, bool> Labourer::get_world_state () const
 {
-    std::map<std::string, bool> world_state;
-
-    return world_state;
+    return this->world_state;
 }
 
 std::map<std::string, bool> Labourer::create_goal_state () const
 {
-    return std::map<std::string, bool>();
+    return this->goal_state;
 }
 
-void Labourer::plan_failed (std::map<std::string, bool> failed_goal_state)
+void Labourer::plan_failed (std::map<std::string, bool> )
 {
 
 }
 
-void Labourer::plan_found (std::map<std::string, bool> goal_state, std::stack<std::shared_ptr<GoapAction>> actions)
+void Labourer::plan_found (std::map<std::string, bool> , std::stack<std::shared_ptr<GoapAction>> )
 {
 
 }
@@ -38,12 +37,17 @@ void Labourer::actions_finished ()
 
 }
 
-void Labourer::plan_aborted (const std::shared_ptr<GoapAction> &aborter)
+void Labourer::plan_aborted (const std::shared_ptr<GoapAction> &)
 {
 
 }
 
-bool Labourer::move_agent(const std::shared_ptr<GoapAction> &nextAction)
+bool Labourer::move_agent(const std::shared_ptr<GoapAction> &)
 {
     return true;
+}
+
+void Labourer::modify_state(const std::string& key, const bool& value)
+{
+    this->world_state[key] = value;
 }
