@@ -7,7 +7,7 @@
 
 class GoapAgent;
 
-class FiniteStateMachine : std::enable_shared_from_this<FiniteStateMachine>
+class FiniteStateMachine : public std::enable_shared_from_this<FiniteStateMachine>
 {
 public:
     FiniteStateMachine();

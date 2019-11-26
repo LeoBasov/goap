@@ -4,3 +4,8 @@ IGoap::IGoap()
 {
 
 }
+
+IGoap::~IGoap()
+{
+
+}

@@ -12,7 +12,8 @@ FiniteStateMachine::~FiniteStateMachine()
 
 void FiniteStateMachine::update(const std::shared_ptr<GoapAgent>& agent)
 {
-    this->stack.top()->update(shared_from_this(), agent);
+    auto ptr = shared_from_this();
+    this->stack.top()->update(ptr, agent);
 }
 
 void FiniteStateMachine::pop()
