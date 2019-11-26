@@ -1,6 +1,7 @@
 #pragma once
 
 #include "finitestate.h"
+#include "goapagent.h"
 
 class MoveToState : public FiniteState
 {

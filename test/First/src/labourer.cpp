@@ -38,12 +38,12 @@ void Labourer::actions_finished ()
 
 }
 
-void Labourer::plan_aborted (GoapAction aborter)
+void Labourer::plan_aborted (const std::shared_ptr<GoapAction> &aborter)
 {
 
 }
 
-bool Labourer::move_agent(GoapAction nextAction)
+bool Labourer::move_agent(const std::shared_ptr<GoapAction> &nextAction)
 {
     return true;
 }

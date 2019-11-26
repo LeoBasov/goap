@@ -14,6 +14,6 @@ public:
     void plan_failed (std::map<std::string, bool> failed_goal_state)  override;
     void plan_found (std::map<std::string, bool> goal_state, std::stack<std::shared_ptr<GoapAction>> actions)  override;
     void actions_finished ()  override;
-    void plan_aborted (GoapAction aborter)  override;
-    bool move_agent(GoapAction nextAction)  override;
+    void plan_aborted (const std::shared_ptr<GoapAction>& aborter)  override;
+    bool move_agent(const std::shared_ptr<GoapAction>& nextAction)  override;
 };

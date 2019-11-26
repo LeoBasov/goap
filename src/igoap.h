@@ -67,7 +67,7 @@ public:
      * One of the actions caused the plan to abort.
      * That action is returned.
      */
-    virtual void plan_aborted (GoapAction aborter) = 0;
+    virtual void plan_aborted (const std::shared_ptr<GoapAction>& aborter) = 0;
 
     /**
      * Called during Update. Move the agent towards the target in order
@@ -75,5 +75,5 @@ public:
      * Return true if the Agent is at the target and the next action can perform.
      * False if it is not there yet.
      */
-    virtual bool move_agent(GoapAction nextAction) = 0;
+    virtual bool move_agent(const std::shared_ptr<GoapAction>& nextAction) = 0;
 };
