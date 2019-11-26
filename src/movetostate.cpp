@@ -10,7 +10,7 @@ MoveToState::~MoveToState()
 
 }
 
-void MoveToState::update(const std::shared_ptr<FiniteStateMachine>& fsm, const std::shared_ptr<GoapAgent>& agent)
+void MoveToState::update(const std::shared_ptr<FiniteStateMachine>& , const std::shared_ptr<GoapAgent>& )
 {
 
 }

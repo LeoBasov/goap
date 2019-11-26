@@ -10,7 +10,7 @@ PerformActionState::~PerformActionState()
 
 }
 
-void PerformActionState::update(const std::shared_ptr<FiniteStateMachine>& fsm, const std::shared_ptr<GoapAgent>& agent)
+void PerformActionState::update(const std::shared_ptr<FiniteStateMachine>& , const std::shared_ptr<GoapAgent>& )
 {
 
 }
