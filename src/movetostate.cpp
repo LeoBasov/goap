@@ -14,18 +14,14 @@ void MoveToState::update(const std::shared_ptr<FiniteStateMachine>& fsm, const s
 {
     const std::shared_ptr<GoapAction>& action = agent->current_actions.top();
 
-    /*if(action->)
+    if(action->requires_in_range() && action->target == nullptr){
+        fsm->pop();
+        fsm->pop();
+        fsm->push(agent->idle_state);
+        return;
+    }
 
-               if (action.requiresInRange() && action.target == null) {
-                    Debug.Log("<color=red>Fatal error:</color> Action requires a target but has none. Planning failed. You did not assign the target in your Action.checkProceduralPrecondition()");
-                    fsm.popState(); // move
-                    fsm.popState(); // perform
-                    fsm.pushState(idleState);
-                    return;
-                }
-
-                // get the agent to move itself
-                if ( dataProvider.moveAgent(action) ) {
-                    fsm.popState();
-                }*/
+    if(agent->data_provider->move_agent(action)){
+        fsm->pop();
+    }
 }

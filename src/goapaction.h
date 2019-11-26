@@ -30,12 +30,13 @@ public:
     void add_effect(const std::string& key, bool value);
     void remove_remove(const std::string& key);
 
+    std::shared_ptr<GameObject> target = nullptr;
+
 protected:
     std::map<std::string, bool> preconditions;
     std::map<std::string, bool> effects;
     bool in_range = false;
     double cost = 1.0;
-    std::shared_ptr<GameObject> target = nullptr;
 
     virtual void reset() = 0;
 };
