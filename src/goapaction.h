@@ -4,7 +4,7 @@
 #include <memory>
 #include <exception>
 
-#include "gameobject.h"
+#include "igoap.h"
 
 class GoapAction
 {
@@ -13,8 +13,8 @@ public:
     virtual ~GoapAction();
 
     virtual bool is_done() const = 0;
-    virtual bool check_procedural_precondition(const std::shared_ptr<GameObject>& agent) = 0;
-    virtual bool perform(const std::shared_ptr<GameObject>& agent) = 0;
+    virtual bool check_procedural_precondition(const std::shared_ptr<IGoap>& agent) = 0;
+    virtual bool perform(const std::shared_ptr<IGoap>& agent) = 0;
     virtual bool requires_in_range() = 0;
 
     void do_reset();
@@ -30,7 +30,7 @@ public:
     void add_effect(const std::string& key, bool value);
     void remove_remove(const std::string& key);
 
-    std::shared_ptr<GameObject> target = nullptr;
+    std::shared_ptr<IGoap> target = nullptr;
 
 protected:
     std::map<std::string, bool> preconditions;

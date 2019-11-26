@@ -2,6 +2,7 @@
 
 #include "finitestate.h"
 #include "goapagent.h"
+#include "goapaction.h"
 
 class MoveToState : public FiniteState
 {

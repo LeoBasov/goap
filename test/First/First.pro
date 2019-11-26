@@ -6,7 +6,6 @@ CONFIG -= qt
 SOURCES += \
         ../../src/finitestate.cpp \
         ../../src/finitestatemachine.cpp \
-        ../../src/gameobject.cpp \
         ../../src/goapaction.cpp \
         ../../src/goapagent.cpp \
         ../../src/goapplaner.cpp \
@@ -21,7 +20,6 @@ SOURCES += \
 HEADERS += \
     ../../src/finitestate.h \
     ../../src/finitestatemachine.h \
-    ../../src/gameobject.h \
     ../../src/goapaction.h \
     ../../src/goapagent.h \
     ../../src/goapplaner.h \

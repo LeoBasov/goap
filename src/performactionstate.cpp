@@ -30,7 +30,7 @@ void PerformActionState::update(const std::shared_ptr<FiniteStateMachine>& fsm, 
         bool in_range = action->requires_in_range() ? action->get_is_in_range() : true;
 
         if(in_range){
-            bool success = action->perform(agent->data_provider->game_object);
+            bool success = action->perform(agent->data_provider);
 
             if(!success){
                 fsm->pop();
