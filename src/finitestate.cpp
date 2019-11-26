@@ -4,3 +4,8 @@ FiniteState::FiniteState()
 {
 
 }
+
+FiniteState::~FiniteState()
+{
+
+}

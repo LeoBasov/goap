@@ -11,7 +11,10 @@ SOURCES += \
         src/goapaction.cpp \
         src/goapagent.cpp \
         src/goapplaner.cpp \
-        src/igoap.cpp
+        src/idlestate.cpp \
+        src/igoap.cpp \
+        src/movetostate.cpp \
+        src/performactionstate.cpp
 
 HEADERS += \
     src/finitestate.h \
@@ -20,4 +23,7 @@ HEADERS += \
     src/goapaction.h \
     src/goapagent.h \
     src/goapplaner.h \
-    src/igoap.h
+    src/idlestate.h \
+    src/igoap.h \
+    src/movetostate.h \
+    src/performactionstate.h
