@@ -11,9 +11,9 @@ public:
 
     std::map<std::string, bool> get_world_state () const  override;
     std::map<std::string, bool> create_goal_state () const  override;
-    void planFailed (std::map<std::string, bool> failedGoal)  override;
-    void planFound (std::map<std::string, bool> goal, std::stack<std::shared_ptr<GoapAction>> actions)  override;
-    void actionsFinished ()  override;
-    void planAborted (GoapAction aborter)  override;
-    bool moveAgent(GoapAction nextAction)  override;
+    void plan_failed (std::map<std::string, bool> failed_goal_state)  override;
+    void plan_found (std::map<std::string, bool> goal_state, std::stack<std::shared_ptr<GoapAction>> actions)  override;
+    void actions_finished ()  override;
+    void plan_aborted (GoapAction aborter)  override;
+    bool move_agent(GoapAction nextAction)  override;
 };

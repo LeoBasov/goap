@@ -50,24 +50,24 @@ public:
      * No sequence of actions could be found for the supplied goal.
      * You will need to try another goal
      */
-    virtual void planFailed (std::map<std::string, bool> failedGoal) = 0;
+    virtual void plan_failed (std::map<std::string, bool> failed_goal_state) = 0;
 
     /**
      * A plan was found for the supplied goal.
      * These are the actions the Agent will perform, in order.
      */
-    virtual void planFound (std::map<std::string, bool> goal, std::stack<std::shared_ptr<GoapAction>> actions) = 0;
+    virtual void plan_found (std::map<std::string, bool> goa_statel, std::stack<std::shared_ptr<GoapAction>> actions) = 0;
 
     /**
      * All actions are complete and the goal was reached. Hooray!
      */
-    virtual void actionsFinished () = 0;
+    virtual void actions_finished () = 0;
 
     /**
      * One of the actions caused the plan to abort.
      * That action is returned.
      */
-    virtual void planAborted (GoapAction aborter) = 0;
+    virtual void plan_aborted (GoapAction aborter) = 0;
 
     /**
      * Called during Update. Move the agent towards the target in order
@@ -75,5 +75,5 @@ public:
      * Return true if the Agent is at the target and the next action can perform.
      * False if it is not there yet.
      */
-    virtual bool moveAgent(GoapAction nextAction) = 0;
+    virtual bool move_agent(GoapAction nextAction) = 0;
 };

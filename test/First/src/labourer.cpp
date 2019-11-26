@@ -23,27 +23,27 @@ std::map<std::string, bool> Labourer::create_goal_state () const
     return std::map<std::string, bool>();
 }
 
-void Labourer::planFailed (std::map<std::string, bool> failedGoal)
+void Labourer::plan_failed (std::map<std::string, bool> failed_goal_state)
 {
 
 }
 
-void Labourer::planFound (std::map<std::string, bool> goal, std::stack<std::shared_ptr<GoapAction>> actions)
+void Labourer::plan_found (std::map<std::string, bool> goal_state, std::stack<std::shared_ptr<GoapAction>> actions)
 {
 
 }
 
-void Labourer::actionsFinished ()
+void Labourer::actions_finished ()
 {
 
 }
 
-void Labourer::planAborted (GoapAction aborter)
+void Labourer::plan_aborted (GoapAction aborter)
 {
 
 }
 
-bool Labourer::moveAgent(GoapAction nextAction)
+bool Labourer::move_agent(GoapAction nextAction)
 {
     return true;
 }
