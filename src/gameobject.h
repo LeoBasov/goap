@@ -1,6 +1,4 @@
-#ifndef GAMEOBJECT_H
-#define GAMEOBJECT_H
-
+#pragma once
 
 class GameObject
 {
@@ -8,4 +6,3 @@ public:
     GameObject();
 };
 
-#endif // GAMEOBJECT_H

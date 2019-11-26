@@ -30,8 +30,8 @@
 class IGoap
 {
 public:
-
     IGoap();
+    virtual ~IGoap() = 0;
 
     /**
      * The starting state of the Agent and the world.
