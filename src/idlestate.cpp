@@ -14,14 +14,21 @@ void IdleState::update(const std::shared_ptr<FiniteStateMachine>& fsm, const std
 {
     // GOAP planning
 
-    // get the world state and the goal we want to plan for
-
-    /*
-    HashSet<KeyValuePair<string,object>> worldState = i_goap.getWorldState();
-    HashSet<KeyValuePair<string,object>> goal = i_goap.createGoalState();
-    */
-
     // Plan
+    auto goal = agent->data_provider->create_goal_state();
+    std::stack<std::shared_ptr<GoapAction>> plan = this->planner.plan(agent);
+
+    if(!plan.size()){
+        agent->current_actions = plan;
+        agent->data_provider->planFound(goal, plan);
+
+        fsm->pop();
+        fsm->push(agent->perform_action_state);
+    }else{
+        fsm->pop();
+        fsm->push(agent->idle_state);
+    }
+
     /*
     Queue<GoapAction> plan = planner.plan(gameObject, availableActions, worldState, goal);
     if (plan != null) {
@@ -38,6 +45,5 @@ void IdleState::update(const std::shared_ptr<FiniteStateMachine>& fsm, const std
         fsm.popState (); // move back to IdleAction state
         fsm.pushState (idleState);
     }
-    */
-
+*/
 }

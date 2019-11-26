@@ -1,13 +1,22 @@
 #pragma once
 
+#include <memory>
 #include <stack>
-#include <unordered_map>
+#include <vector>
 
-#include "gameobject.h"
+#include "igoap.h"
+#include "finitestate.h"
 
 class GoapAgent
 {
 public:
     GoapAgent();
 
+    std::shared_ptr<IGoap> data_provider;
+    std::vector<std::shared_ptr<GoapAction>> available_actions;
+    std::stack<std::shared_ptr<GoapAction>> current_actions;
+
+    std::shared_ptr<FiniteState> idle_state;
+    std::shared_ptr<FiniteState> move_to_state;
+    std::shared_ptr<FiniteState> perform_action_state;
 };
